@@ -1,0 +1,38 @@
+@import "@economist/component-palette-worldif";
+
+.user-more-menu {
+  background: grey;
+  {
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    .mainmenu li {
+      display: inline-block;
+      position: relative;
+    }
+    svg {
+      width: 60px;
+      height: 60px;
+      {
+        path {
+
+        }
+      }
+    }
+    .menu:hover + .submenu, .submenu:hover {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: auto;
+      width: 320px;
+      z-index: 999999;
+      border: solid blue 1px;
+      margin: 0;
+    }
+  }
+}
