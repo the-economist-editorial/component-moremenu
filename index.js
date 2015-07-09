@@ -29,7 +29,7 @@ export default class MoreMenu extends React.Component {
                 </ul>
               </li>
               <li className="more-from-economist-menu">
-              <h3>My subscription</h3>
+              <h3>More from The Economist</h3>
                 <ul>
                   <li><a href="http://www.economist.com/digital">The Economist digital editions</a></li>
                   <li><a href="http://www.economist.com/newsletters">Newsletters</a></li>
@@ -41,8 +41,8 @@ export default class MoreMenu extends React.Component {
               </li>
               </ul>
           </li>
-          <li>
-            <a href="https://subscriptions.economist.com/GLB/MAST/T1" target="_blank">Subscribe</a>
+          <li className="subscription-menu">
+            <a href="https://subscriptions.economist.com/GLB/MAST/T1" target="_blank">SUBSCRIBE</a>
           </li>
         </ul>
       </nav>

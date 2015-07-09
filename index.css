@@ -1,6 +1,10 @@
 @import "@economist/component-palette-worldif";
+@import "@economist/component-font-neutra2";
 
 .user-more-menu {
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
   background: grey;
   {
     ul, li {
@@ -10,6 +14,19 @@
     .mainmenu li {
       display: inline-block;
       position: relative;
+    }
+    h3 {
+      font-size: 14px;
+      color: var(--white);
+      font-weight: bold;
+      margin-top: 0;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      text-decoration: none;
     }
     svg {
       width: 60px;
@@ -23,16 +40,74 @@
     .menu:hover + .submenu, .submenu:hover {
       display: block;
     }
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      height: auto;
-      width: 320px;
-      z-index: 999999;
-      border: solid blue 1px;
-      margin: 0;
+      background: var(--black);
+  }
+}
+
+.user-more-menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: auto;
+  width: 320px;
+  z-index: 999999;
+  margin: 0;
+}
+
+.user-more-menu .submenu > li {
+  padding: 12px;
+  width: 100%;
+}
+
+.user-more-menu .submenu > li ul > li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.user-more-menu .submenu > li ul > li {
+  width: 100%;
+}
+
+.user-more-menu .submenu > li ul > li a {
+  line-height: 22px;
+}
+.user-more-menu .user-menu {
+  {
+    a {
+      color: var(--ultralight-grey);
+    }
+    .log-out-btn,
+    .log-in-btn {
+      background: var(--vivid-blue);
+      text-align: center;
+      font-weight: bold;
+      line-height: 35px;
+    }
+    ul {
+      margin-bottom: 12px;
     }
   }
+}
+
+.user-more-menu .more-from-economist-menu,
+.user-more-menu .my-subscription-menu {
+  {
+    a {
+      color: var(--ultralight-grey);
+    }
+  }
+}
+.user-more-menu .user-menu,
+.user-more-menu .my-subscription-menu,
+.menu:hover {
+  background: var(--black);
+}
+
+.more-from-economist-menu {
+  background: var(--dark-grey);
+}
+.user-more-menu .subscription-menu a {
+  font-weight: bold;
+  color: var(--orange);
+  font-size: 18px;
 }
