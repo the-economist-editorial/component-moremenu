@@ -1,51 +1,192 @@
-import React from 'react';
-import Icon from '@economist/component-icon';
-import UserMenu from '@economist/component-usermenu';
+'use strict';
 
-export default class MoreMenu extends React.Component {
+exports.__esModule = true;
 
-  constructor(props) {
-    super(props);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _economistComponentIcon = require('@economist/component-icon');
+
+var _economistComponentIcon2 = _interopRequireDefault(_economistComponentIcon);
+
+var _economistComponentUsermenu = require('@economist/component-usermenu');
+
+var _economistComponentUsermenu2 = _interopRequireDefault(_economistComponentUsermenu);
+
+var MoreMenu = (function (_React$Component) {
+  _inherits(MoreMenu, _React$Component);
+
+  function MoreMenu(props) {
+    _classCallCheck(this, MoreMenu);
+
+    _React$Component.call(this, props);
   }
 
-  render() {
+  MoreMenu.prototype.render = function render() {
 
-    return (
-      <nav className="user-more-menu">
-        <ul className="mainmenu">
-          <li>
-            <a href="#" className="menu" title="More from The Economist">
-              <Icon type='hamburger' background='none' shape='square' />
-            </a>
-            <ul className="submenu">
-              <li className="user-menu"><UserMenu /></li>
-              <li className="my-subscription-menu">
-                <h3>My subscription</h3>
-                <ul>
-                  <li><a href="http://www.economist.com/products/subscribe">Subscribe to The Economist</a></li>
-                  <li><a href="http://www.economist.com/activate">Activate my digital subscription</a></li>
-                  <li><a href="http://www.economist.com/user">Manage my subscription</a></li>
-                  <li><a href="http://www.economist.com/products/renew">Renew</a></li>
-                </ul>
-              </li>
-              <li className="more-from-economist-menu">
-              <h3>More from The Economist</h3>
-                <ul>
-                  <li><a href="http://www.economist.com/digital">The Economist digital editions</a></li>
-                  <li><a href="http://www.economist.com/newsletters">Newsletters</a></li>
-                  <li><a href="http://www.economist.com/events">Events</a></li>
-                  <li><a href="http://jobs.economist.com">Jobs.Economist.com</a></li>
-                  <li><a href="http://store.economist.com/">The Economist Store</a></li>
-                  <li><a href="http://www.economist.com/bookmarks" html="1">Timekeeper reading list</a></li>
-                </ul>
-              </li>
-              </ul>
-          </li>
-          <li className="subscription-menu">
-            <a href="https://subscriptions.economist.com/GLB/MAST/T1" target="_blank">SUBSCRIBE</a>
-          </li>
-        </ul>
-      </nav>
+    return _react2['default'].createElement(
+      'nav',
+      { className: 'user-more-menu' },
+      _react2['default'].createElement(
+        'ul',
+        { className: 'mainmenu' },
+        _react2['default'].createElement(
+          'li',
+          null,
+          _react2['default'].createElement(
+            'a',
+            { href: '#', className: 'menu', title: 'More from The Economist' },
+            _react2['default'].createElement(_economistComponentIcon2['default'], { type: 'hamburger', background: 'none', shape: 'square' })
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'submenu' },
+            _react2['default'].createElement(
+              'li',
+              { className: 'user-menu' },
+              _react2['default'].createElement(_economistComponentUsermenu2['default'], null)
+            ),
+            _react2['default'].createElement(
+              'li',
+              { className: 'my-subscription-menu' },
+              _react2['default'].createElement(
+                'h3',
+                null,
+                'My subscription'
+              ),
+              _react2['default'].createElement(
+                'ul',
+                null,
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/products/subscribe' },
+                    'Subscribe to The Economist'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/activate' },
+                    'Activate my digital subscription'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/user' },
+                    'Manage my subscription'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/products/renew' },
+                    'Renew'
+                  )
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              { className: 'more-from-economist-menu' },
+              _react2['default'].createElement(
+                'h3',
+                null,
+                'More from The Economist'
+              ),
+              _react2['default'].createElement(
+                'ul',
+                null,
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/digital' },
+                    'The Economist digital editions'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/newsletters' },
+                    'Newsletters'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/events' },
+                    'Events'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://jobs.economist.com' },
+                    'Jobs.Economist.com'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://store.economist.com/' },
+                    'The Economist Store'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'li',
+                  null,
+                  _react2['default'].createElement(
+                    'a',
+                    { href: 'http://www.economist.com/bookmarks', html: '1' },
+                    'Timekeeper reading list'
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          'li',
+          { className: 'subscription-menu' },
+          _react2['default'].createElement(
+            'a',
+            { href: 'https://subscriptions.economist.com/GLB/MAST/T1', target: '_blank' },
+            'SUBSCRIBE'
+          )
+        )
+      )
     );
-  }
-}
+  };
+
+  return MoreMenu;
+})(_react2['default'].Component);
+
+exports['default'] = MoreMenu;
+module.exports = exports['default'];
+

@@ -28,7 +28,7 @@
   height: 60px;
 }
 .menu:hover + .submenu, .submenu:hover {
-  display: block;
+  display: block !important;
 }
 .user-more-menu .submenu {
   display: none;
