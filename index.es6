@@ -4,10 +4,6 @@ import UserMenu from '@economist/component-usermenu';
 
 export default class MoreMenu extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <nav className="user-more-menu">
