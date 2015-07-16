@@ -10,7 +10,7 @@ export default class MoreMenu extends React.Component {
         <ul className="mainmenu">
           <li>
             <a href="#" className="menu" title="More from The Economist">
-              <Icon type="hamburger" background="none" shape="square" />
+              <Icon icon="hamburger" background="none" shape="square" />
             </a>
             <ul className="submenu">
               <li className="user-menu"><UserMenu /></li>

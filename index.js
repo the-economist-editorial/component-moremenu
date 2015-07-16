@@ -23,14 +23,13 @@ var _economistComponentUsermenu2 = _interopRequireDefault(_economistComponentUse
 var MoreMenu = (function (_React$Component) {
   _inherits(MoreMenu, _React$Component);
 
-  function MoreMenu(props) {
+  function MoreMenu() {
     _classCallCheck(this, MoreMenu);
 
-    _React$Component.call(this, props);
+    _React$Component.apply(this, arguments);
   }
 
   MoreMenu.prototype.render = function render() {
-
     return _react2['default'].createElement(
       'nav',
       { className: 'user-more-menu' },
