@@ -28,19 +28,30 @@
   height: 60px;
 }
 
-/*.menu:hover + .submenu, .submenu:hover {
-  display: block !important;
-}*/
-
 .menu[data-open="true"] + .submenu {
   display: block;
-  background-color: red;
 }
 
 .menu[data-open="false"] + .submenu {
   display: none;
-  background-color: blue;
 }
+
+.menu[data-open="false"] {
+  background-color: #333;
+}
+
+.menu[data-open="true"] {
+  background-color: #000;
+}
+
+.menu[data-open="false"]:hover {
+  background-color: #000;
+}
+
+.menu[data-open="true"]:hover {
+  background-color: #000;
+}
+
 .user-more-menu .submenu {
   display: none;
   position: absolute;
