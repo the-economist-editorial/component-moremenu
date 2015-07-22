@@ -27,8 +27,19 @@
   width: 60px;
   height: 60px;
 }
-.menu:hover + .submenu, .submenu:hover {
+
+/*.menu:hover + .submenu, .submenu:hover {
   display: block !important;
+}*/
+
+.menu[data-open="true"] + .submenu {
+  display: block;
+  background-color: red;
+}
+
+.menu[data-open="false"] + .submenu {
+  display: none;
+  background-color: blue;
 }
 .user-more-menu .submenu {
   display: none;

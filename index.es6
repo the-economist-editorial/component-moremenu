@@ -4,12 +4,47 @@ import UserMenu from '@economist/component-usermenu';
 
 export default class MoreMenu extends React.Component {
 
+
+  static get propTypes() {
+    return {
+      onClose: React.PropTypes.func,
+      onOpen: React.PropTypes.func
+    };
+  }
+
+  constructor() {
+    super();
+    this.state = { open: false };
+  }
+
+  toggleExpanded() {
+    if (this.state.open) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+
+  close() {
+    this.setState({ open: false });
+    if (this.props.onClose) {
+      this.props.onClose(this);
+    }
+  }
+
+  open() {
+    this.setState({ open: true });
+    if (this.props.onOpen) {
+      this.props.onOpen(this);
+    }
+  }
+
   render() {
     return (
       <nav className="user-more-menu">
-        <ul className="mainmenu">
+        <ul className="mainmenu" onClick={this.toggleExpanded.bind(this)}>
           <li>
-            <a href="#" className="menu" title="More from The Economist">
+            <a href="#" className="menu" title="More from The Economist" data-open={this.state.open}>
               <Icon icon="hamburger" background="none" shape="square" size="100%"/>
             </a>
             <ul className="submenu">
