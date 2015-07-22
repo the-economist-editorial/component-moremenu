@@ -8,7 +8,7 @@ export default class MoreMenu extends React.Component {
   static get propTypes() {
     return {
       onClose: React.PropTypes.func,
-      onOpen: React.PropTypes.func
+      onOpen: React.PropTypes.func,
     };
   }
 
