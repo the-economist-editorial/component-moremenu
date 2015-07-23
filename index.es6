@@ -1,9 +1,7 @@
 import React from 'react';
 import Icon from '@economist/component-icon';
 import UserMenu from '@economist/component-usermenu';
-
 export default class MoreMenu extends React.Component {
-
 
   static get propTypes() {
     return {
@@ -42,11 +40,12 @@ export default class MoreMenu extends React.Component {
   render() {
     return (
       <nav className="user-more-menu">
-        <ul className="mainmenu" onClick={this.toggleExpanded.bind(this)}>
+        <ul className="mainmenu">
           <li>
-            <a href="#" className="menu" title="More from The Economist" data-open={this.state.open}>
+            <button className="menu" onClick={this.toggleExpanded.bind(this)} title="More from The Economist"
+            data-open={this.state.open}>
               <Icon icon="hamburger" background="none" shape="square" size="100%"/>
-            </a>
+            </button>
             <ul className="submenu">
               <li className="user-menu"><UserMenu /></li>
               <li className="my-subscription-menu">
