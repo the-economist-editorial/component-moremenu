@@ -65,10 +65,10 @@
     "build": "npm-assets ."
   },
   "dependencies": {
-    "@economist/component-font-neutra2": "^1.0.1",
-    "@economist/component-icon": "^3.0.2",
+    "@economist/component-font-neutra2": "^1.0.4",
+    "@economist/component-icon": "^3.0.4",
     "@economist/component-palette-worldif": "^1.0.0",
-    "@economist/component-usermenu": "^1.0.0",
+    "@economist/component-usermenu": "^2.0.0",
     "react": "^0.13.3",
     "react-fastclick": "^1.0.2"
   },
