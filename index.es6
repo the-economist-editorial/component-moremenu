@@ -3,6 +3,8 @@ import Icon from '@economist/component-icon';
 import UserMenu from '@economist/component-usermenu';
 export default class MoreMenu extends React.Component {
 
+/* global document: false */
+
   static get propTypes() {
     return {
       onClose: React.PropTypes.func,
@@ -15,22 +17,33 @@ export default class MoreMenu extends React.Component {
     this.state = { open: false };
   }
 
+  componentDidMount() {
+    const subMenuElement = document.querySelector('.submenu');
+    const menuElement = document.querySelector('.menu');
+    document.addEventListener('click', (event) => {
+      if (event.target !== subMenuElement && !subMenuElement.contains(event.target) &&
+        event.target !== menuElement && !menuElement.contains(event.target)) {
+        this.closeMenu();
+      }
+    });
+  }
+
   toggleExpanded() {
     if (this.state.open) {
-      this.close();
+      this.closeMenu();
     } else {
-      this.open();
+      this.openMenu();
     }
   }
 
-  close() {
+  closeMenu() {
     this.setState({ open: false });
     if (this.props.onClose) {
       this.props.onClose(this);
     }
   }
 
-  open() {
+  openMenu() {
     this.setState({ open: true });
     if (this.props.onOpen) {
       this.props.onOpen(this);
