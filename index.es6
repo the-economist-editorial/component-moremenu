@@ -18,14 +18,22 @@ export default class MoreMenu extends React.Component {
   }
 
   componentDidMount() {
-    const subMenuElement = document.querySelector('.submenu');
-    const menuElement = document.querySelector('.menu');
+    const subMenuElement = React.findDOMNode(this.refs.submenu);
+    const menuElement = React.findDOMNode(this.refs.menu);
     document.addEventListener('click', (event) => {
       if (event.target !== subMenuElement && !subMenuElement.contains(event.target) &&
         event.target !== menuElement && !menuElement.contains(event.target)) {
         this.closeMenu();
       }
     });
+  }
+
+  componentWillUnmount() {
+    this.cleanupEventListeners();
+  }
+
+  cleanupEventListeners() {
+    document.removeEventListener('click');
   }
 
   toggleExpanded() {
@@ -55,11 +63,11 @@ export default class MoreMenu extends React.Component {
       <nav className="user-more-menu">
         <ul className="mainmenu">
           <li>
-            <button className="menu" onClick={this.toggleExpanded.bind(this)} title="More from The Economist"
+            <button className="menu" ref="menu" onClick={this.toggleExpanded.bind(this)} title="More from The Economist"
             data-open={this.state.open}>
               <Icon icon="hamburger" background="none" shape="square" size="100%"/>
             </button>
-            <ul className="submenu">
+            <ul className="submenu" ref="submenu">
               <li className="user-menu"><UserMenu /></li>
               <li className="my-subscription-menu">
                 <h3>My subscription</h3>
