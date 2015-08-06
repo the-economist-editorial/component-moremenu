@@ -1,6 +1,13 @@
 @import "@economist/component-palette-worldif";
 @import "@economist/component-font-neutra2";
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .user-more-menu {
   height: 100%;
 }
@@ -47,12 +54,12 @@
   margin: 0;
 }
 .user-more-menu .submenu > li {
-  padding: 12px;
+/*  padding: 12px 14px 8px 10px;*/
   width: 100%;
 }
-.user-more-menu .submenu > li ul > li:not(:last-child) {
+/*.user-more-menu .submenu > li ul > li:not(:last-child) {
   margin-bottom: 8px;
-}
+}*/
 .user-more-menu .submenu > li ul > li {
   width: 100%;
 }
@@ -125,4 +132,50 @@
 
 .menu[data-open="true"]:hover {
   background-color: #000;
+}
+
+.user-login-container {
+  width: 99%;
+  margin: 0 auto;
+}
+
+.submenu div, .submenu div ul li {
+  width: 100%;
+}
+
+.no-mobile .scrollmenu {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-height: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.mobile .scrollmenu {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 320px;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+.scrollmenu ul li {
+  display: inline-block;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.scrollmenu ul li li {
+  padding-left: 0;
+}
+
+
+.scrollmenu .my-subscription-menu  ul li:hover {
+  text-decoration: underline;
+}
+
+
+.user-login-container ul li:hover {
+  text-decoration: underline;
 }
