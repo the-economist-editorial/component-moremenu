@@ -3,8 +3,6 @@ import Icon from '@economist/component-icon';
 import UserMenu from '@economist/component-usermenu';
 export default class MoreMenu extends React.Component {
 
-/* global window: false */
-
   static get propTypes() {
     return {
       onClose: React.PropTypes.func,
