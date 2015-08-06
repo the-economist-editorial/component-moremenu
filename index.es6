@@ -3,9 +3,7 @@ import Icon from '@economist/component-icon';
 import UserMenu from '@economist/component-usermenu';
 export default class MoreMenu extends React.Component {
 
-
-/* global document: false */
-/* global navigator: false */
+/* global window: false */
 
   static get propTypes() {
     return {
@@ -21,17 +19,18 @@ export default class MoreMenu extends React.Component {
   }
 
   componentWillMount() {
-    if (typeof navigator !== 'undefined') {
+    if (typeof window !== 'undefined' && window.navigator) {
+      const isAndroidOrIphone = window.navigator.userAgent.match(/Android|iPhone/i);
+      const isIpodOrIpad = window.navigator.userAgent.match(/iPod|iPad/i);
+      const isMobile = isAndroidOrIphone && !isIpodOrIpad;
       this.setState({
-        isMobile: (navigator.userAgent.match(/Android|iPhone/i) &&
-        !navigator.userAgent.match(/iPod|iPad/i))
-        ? 'mobile' : 'no-mobile',
+        isMobile: isMobile ? 'mobile' : 'no-mobile',
       });
     }
   }
 
   componentDidMount() {
-    document.addEventListener('click', this.closeFromOutsideClick);
+    window.addEventListener('click', this.closeFromOutsideClick);
   }
 
   componentWillUnmount() {
@@ -39,7 +38,7 @@ export default class MoreMenu extends React.Component {
   }
 
   cleanupEventListeners() {
-    document.removeEventListener('click', this.closeFromOutsideClick);
+    window.removeEventListener('click', this.closeFromOutsideClick);
   }
 
   closeFromOutsideClick(event) {
