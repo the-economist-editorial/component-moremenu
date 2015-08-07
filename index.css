@@ -53,22 +53,23 @@ html {
   z-index: 999999;
   margin: 0;
 }
+
 .user-more-menu .submenu > li {
-/*  padding: 12px 14px 8px 10px;*/
   width: 100%;
 }
-/*.user-more-menu .submenu > li ul > li:not(:last-child) {
-  margin-bottom: 8px;
-}*/
+
 .user-more-menu .submenu > li ul > li {
   width: 100%;
 }
+
 .user-more-menu .submenu > li ul > li a {
   line-height: 22px;
 }
+
 .user-more-menu .user-menu a {
   color: var(--white);
 }
+
 .user-more-menu .user-menu .log-out-btn,
 .user-more-menu .user-menu .log-in-btn {
   background: var(--vivid-blue);
@@ -76,21 +77,26 @@ html {
   font-weight: bold;
   line-height: 35px;
 }
+
 .user-more-menu .user-menu ul {
   margin-bottom: 12px;
 }
+
 .user-more-menu .more-from-economist-menu a,
 .user-more-menu .my-subscription-menu a {
   color: var(--ultralight-grey);
 }
+
 .user-more-menu .user-menu,
 .user-more-menu .my-subscription-menu,
 .menu:hover {
   background: var(--black);
 }
+
 .more-from-economist-menu {
   background: var(--dark-grey);
 }
+
 .user-more-menu .subscription-menu a {
   font-weight: bold;
   color: var(--orange);
@@ -150,15 +156,12 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-
 .mobile .scrollmenu {
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 320px;
   -webkit-overflow-scrolling: touch;
 }
-
-
 
 .scrollmenu ul li {
   display: inline-block;
@@ -170,11 +173,9 @@ html {
   padding-left: 0;
 }
 
-
 .scrollmenu .my-subscription-menu  ul li:hover {
   text-decoration: underline;
 }
-
 
 .user-login-container ul li:hover {
   text-decoration: underline;
